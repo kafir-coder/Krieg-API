@@ -1,0 +1,29 @@
+name: lint-build-test
+
+on:
+  push:
+    branches:
+      - "developer"
+jobs:
+  lint-build-test: 
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+      - name: checkout node version
+        uses: actions/setup-node@v2
+        with:
+          node-version: 17
+      - name: Install packages
+        run: npm install
+      - name: lint with eslint
+        uses: synergy-au/eslint-action@v1
+        with:
+          rules-path: './.eslintrc.yml'
+          setup-from-package-json: 'true'
+      - name: test
+        run: npm run test
+      - name: build
+        run: npm run build
