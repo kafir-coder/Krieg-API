@@ -1,3 +1,5 @@
+<img src="https://github.com/kafir-coder/Krieg-API/blob/develop/logo.png" witdth="250" height="250"/>
+
 # Krieg-API
 ![GitHub](https://img.shields.io/github/license/kafir-coder/Krieg-API)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/kafir-coder/Krieg-API/lint-build-test)
