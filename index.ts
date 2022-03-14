@@ -1,7 +1,8 @@
-import http from "http"
+import http from 'http';
 
 
 
+const a = { b: 1 };
 for (;;) {
-    console.log("server running")
+	console.log('server running');
 }
