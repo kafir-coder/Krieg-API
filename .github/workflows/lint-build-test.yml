@@ -3,7 +3,7 @@ name: lint-build-test
 on:
   push:
     branches:
-      - "developer"
+      - "develop"
 jobs:
   lint-build-test: 
     runs-on: ubuntu-20.04

@@ -5,6 +5,6 @@ describe('', function () {
 	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	it('', function(){
 
-		expect(sum(2, 2)).toBe(4);
+		expect(sum(2, 2)).toBe(6);
 	});
 });
