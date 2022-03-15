@@ -29,6 +29,16 @@ export type war_type = {
 		month: number,
 		year: number
 	}
+	end: {
+		day: number,
+		month: number,
+		year: number
+	}
+	countries: string[]
+	century: number
+	reason: string[]
+	consequences: string[]
+	photos: string[]
 }
 
 

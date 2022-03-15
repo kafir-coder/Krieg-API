@@ -23,7 +23,17 @@ const make_sut = (year: number): SutTypes => {
 			day: 16,
 			month: 2,
 			year: year
-		}
+		},
+		countries: [ 'DE', 'USA', 'UK' ],
+		century: 20,
+		consequences: [ 'A devasted europe' ],
+		end: {
+			day: 16,
+			month: 2,
+			year: year
+		},
+		photos: [ 'subaru' ],
+		reason: [ 'moncherrie' ]
 	};
 	const entity_validator = new EntityValidatorMock();
 	const entity = new War(ww2, entity_validator);
@@ -34,14 +44,14 @@ describe('war entity', () => {
 	it('should return a war_type obejct', () => {
 		const { sut } = make_sut(1939);
 		sut.validate();
-		expect(sut.getEntity).toEqual({
-			name: expect.any(String),
-			begin: {
-				day: expect.any(Number),
-				month: expect.any(Number),
-				year: expect.any(Number)
-			}
-		});
+		expect(sut.getEntity).toHaveProperty('name');
+		expect(sut.getEntity).toHaveProperty('begin');
+		expect(sut.getEntity).toHaveProperty('end');
+		expect(sut.getEntity).toHaveProperty('century');
+		expect(sut.getEntity).toHaveProperty('countries');
+		expect(sut.getEntity).toHaveProperty('consequences');
+		expect(sut.getEntity).toHaveProperty('reason');
+		expect(sut.getEntity).toHaveProperty('photos');
 	});
     
 	it('should return null', async () => {
